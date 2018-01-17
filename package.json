@@ -1,15 +1,16 @@
 {
   "name": "bittrex-graph",
   "version": "0.1.0",
+  "homepage": "http://www.ggalliani.com/projects/cg",
   "private": true,
   "dependencies": {
     "chart.js": "1.1.1",
+    "debounce": "^1.1.0",
     "moment": "^2.20.1",
     "react": "^16.2.0",
-    "react-chartjs": "^0.8.0",
     "react-dom": "^16.2.0",
-    "react-easy-chart": "^1.0.0",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "recharts": "^1.0.0-beta.9"
   },
   "scripts": {
     "start": "react-scripts start",
