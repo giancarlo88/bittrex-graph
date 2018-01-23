@@ -45,10 +45,13 @@ class App extends Component {
               const dateB = Date.parse(b.date)
               return dateA - dateB
             })
-            .map((item, index) => ({
-              x: Number(Date.parse(item.date)),
-              y: Number(item.value)
-            }))
+            .map((item, index) => {
+              const date = new Date(item.date)
+              return {
+                x: `${date.toLocaleDateString()}`,
+                y: Number(item.value)
+              }
+            })
         }))
       }
     )
@@ -65,7 +68,7 @@ class App extends Component {
           width={this.state.graphWidth}
           height={this.state.graphHeight}
         >
-          <XAxis dataKey={'x'} type="number" name="date" domain={['auto', 'auto']} />
+          <XAxis dataKey={'x'} name="date" domain={['auto', 'auto']} />
           <YAxis dataKey={'y'} type="number" name="btc value" />
           <Scatter
             shape={() => '.'}
